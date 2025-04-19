@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-8+)7c4_aba-(73x&i4z*^j^eo7x4utq6t*n^p*=8+3$ct&@$^#
 
 # # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['.vercel.app', 'localhost','127.0.0.1','128.100.10.128']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'emp_app',
-    'widget_tweaks',
-    'simple_history',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -50,10 +49,9 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",  # Add this line
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "simple_history.middleware.HistoryRequestMiddleware",
 ]
 
 
@@ -148,7 +146,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 
 
 
